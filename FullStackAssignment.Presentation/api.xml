@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FullStackAssignment.Presentation</name>
+    </assembly>
+    <members>
+        <member name="T:FullStackAssignment.Bootstrapper.Controllers.CustomControllerBase">
+            <summary>
+            custom controller for controllerbase class
+            </summary>
+        </member>
+        <member name="T:FullStackAssignment.Presentation.Controllers.v1.AccountController">
+            <summary>
+            Provides endpoints for user account management, including registration, login, 
+            email and username runtime check
+            </summary>
+        </member>
+        <member name="M:FullStackAssignment.Presentation.Controllers.v1.AccountController.PostRegister(FullStackAssignment.Application.DTOs.UserDTOs.RegisterDTO)">
+            <summary>
+            Register new user
+            </summary>
+        </member>
+        <member name="M:FullStackAssignment.Presentation.Controllers.v1.AccountController.Login(FullStackAssignment.Application.DTOs.UserDTOs.LoginDTO)">
+            <summary>
+            Login user
+            </summary>
+        </member>
+        <member name="M:FullStackAssignment.Presentation.Controllers.v1.AccountController.LogOut(System.String)">
+            <summary>
+            logout from system
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FullStackAssignment.Presentation.Controllers.v1.AccountController.RefreshToken(FullStackAssignment.Application.DTOs.UserDTOs.TokenModel)">
+            <summary>
+            Generate New Token by refreshtoken
+            </summary>
+            <param name="token">exsist token</param>
+            <returns>new authentication instance</returns>
+        </member>
+        <member name="M:FullStackAssignment.Presentation.Controllers.v1.AccountController.CheckEmailExists(System.String)">
+            <summary> /// 
+            Check Email Exists 
+            /// </summary> /// 
+            <param name="email">email</param> 
+            /// <returns>true or false</returns> 
+        </member>
+        <member name="M:FullStackAssignment.Presentation.Controllers.v1.AccountController.CheckUserNameExists(System.String)">
+            <summary> /// 
+            Check Username Exists 
+            /// </summary> /// 
+            <param name="username">username</param> 
+            /// <returns>true or false</returns> 
+        </member>
+        <member name="T:FullStackAssignment.Presentation.Controllers.v1.CategoryController">
+            <summary>
+            Handles category management operations: create, update, delete, get by ID, get all.
+            </summary>
+        </member>
+        <member name="M:FullStackAssignment.Presentation.Controllers.v1.CategoryController.CreateCategory(FullStackAssignment.Application.DTOs.CategoryDTOs.CategoryRequestAdd)">
+            <summary>
+            Creates a new category.
+            </summary>
+        </member>
+        <member name="M:FullStackAssignment.Presentation.Controllers.v1.CategoryController.UpdateCategory(System.Guid,FullStackAssignment.Application.DTOs.CategoryDTOs.CategoryRequestUpdate)">
+            <summary>
+            Updates an existing category by ID.
+            </summary>
+        </member>
+        <member name="M:FullStackAssignment.Presentation.Controllers.v1.CategoryController.DeleteCategory(System.Guid)">
+            <summary>
+            Deletes a category by ID.
+            </summary>
+        </member>
+        <member name="M:FullStackAssignment.Presentation.Controllers.v1.CategoryController.GetCategoryById(System.Guid)">
+            <summary>
+            Retrieves a category by ID.
+            </summary>
+        </member>
+        <member name="M:FullStackAssignment.Presentation.Controllers.v1.CategoryController.GetAllCategories">
+            <summary>
+            Retrieves all categories.
+            </summary>
+        </member>
+        <member name="T:FullStackAssignment.Presentation.Controllers.v1.ProductController">
+            <summary>
+             product endpoints controller
+            </summary>
+        </member>
+        <member name="M:FullStackAssignment.Presentation.Controllers.v1.ProductController.CreateProduct(FullStackAssignment.Presentation.Models.ProductRequestAddApi)">
+            <summary>
+            Creates a new product with optional image upload.
+            </summary>
+        </member>
+        <member name="M:FullStackAssignment.Presentation.Controllers.v1.ProductController.UpdateProduct(System.String,FullStackAssignment.Presentation.Models.ProductRequestUpdateApi)">
+            <summary>
+            Updates an existing product, optionally updating the image.
+            </summary>
+        </member>
+        <member name="M:FullStackAssignment.Presentation.Controllers.v1.ProductController.DeleteProduct(System.String)">
+            <summary>
+            Deletes a product by its product code.
+            </summary>
+        </member>
+        <member name="M:FullStackAssignment.Presentation.Controllers.v1.ProductController.GetProductByCode(System.String)">
+            <summary>
+            Retrieves a single product by its product code.
+            </summary>
+        </member>
+        <member name="M:FullStackAssignment.Presentation.Controllers.v1.ProductController.GetAllProducts">
+            <summary>
+            Retrieves all products.
+            </summary>
+        </member>
+        <member name="M:FullStackAssignment.Presentation.Controllers.v1.ProductController.GetFileBytesAsync(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Helper: Reads an IFormFile into a byte array.
+            </summary>
+        </member>
+        <member name="T:FullStackAssignment.Presentation.PresentationAssemply">
+            <summary>
+            used as helper to giving the assmply name for bootstrap layer
+            </summary>
+        </member>
+    </members>
+</doc>

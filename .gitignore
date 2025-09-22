@@ -1,0 +1,21 @@
+﻿# Node.js dependencies
+node_modules/
+*/node_modules/
+*/*/node_modules/
+
+# Angular specific
+ClientApp/ProductsApp/node_modules/
+dist/
+tmp/
+*.tgz
+*.js.map
+.cache/
+.angular/
+
+# ASP.NET
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.cache
