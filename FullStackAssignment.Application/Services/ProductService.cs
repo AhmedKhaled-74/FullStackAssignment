@@ -79,7 +79,10 @@ namespace FullStackAssignment.Application.Services
                 // Save image using infrastructure service and delete old
                 var imageUrl = await _fileRepo.SaveProductImageAsync(productUpdate.ImageContent, productUpdate.ImageExtension);
                 var product = productUpdate.ToProductEntityByUpdate();
-                await _fileRepo.DeleteOldImageAsync(product.Image);
+                var exsistProduct = await GetProductByCodeAsync(productUpdate.ProductCode);
+                if (exsistProduct == null)
+                    throw new ArgumentException(nameof(exsistProduct));
+                await _fileRepo.DeleteOldImageAsync(exsistProduct.Image);
                 product.Image = imageUrl;
                 var updatedProduct = await _productRepository.UpdateProductAsync(productCode, product);
                 return updatedProduct.ToProductResultEntity();
