@@ -43,7 +43,7 @@ namespace FullStackAssignment.IntegrationTests
                 if (descriptor != null)
                     services.Remove(descriptor);
 
-                services.AddDbContext<AppDbContext>(options =>
+                services.AddDbContext<AppDbContext, TestAppDbContext>(options =>
                 {
                     options.UseInMemoryDatabase("DatabaseForTesting");
                 });

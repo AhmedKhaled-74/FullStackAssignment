@@ -9,6 +9,10 @@ namespace FullStackAssignment.Infrastructure.DbContexts
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
+        public AppDbContext(DbContextOptions options) : base(options)
+        {
+        }
+
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<User> Users { get; set; }
@@ -144,7 +148,7 @@ namespace FullStackAssignment.Infrastructure.DbContexts
 
         }
         // Method to execute stored procedure
-        public async Task<int> GetNextProductCodeAsync()
+        public virtual async Task<int> GetNextProductCodeAsync()
         {
             var connection = Database.GetDbConnection();
             var wasConnectionOpen = connection.State == ConnectionState.Open;
