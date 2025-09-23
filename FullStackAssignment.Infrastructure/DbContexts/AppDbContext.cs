@@ -9,9 +9,6 @@ namespace FullStackAssignment.Infrastructure.DbContexts
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public AppDbContext(DbContextOptions options) : base(options)
-        {
-        }
 
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
