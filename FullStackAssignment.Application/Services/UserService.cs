@@ -50,6 +50,7 @@ namespace FullStackAssignment.Application.Services
             var authenticationResponse = _jwtServiceReposetory.CreateJwtToken(user);
             user.RefreshToken = authenticationResponse.RefreshToken;
             user.RefreshTokenExpiration = authenticationResponse.RefreshTokenExpirationDate;
+            user.LastLoginDate = DateTime.UtcNow;
             await _userRepository.UpdateUserAsync(user);
 
             return authenticationResponse;
